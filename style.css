@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/bg-dark-mobile.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+#container {
+  width: 360px;
+  height: 712px;
+  margin: 56px auto 0px;
+
+  /*border: 1px solid red;*/
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+
+  /*width:360px;
+    height:192px;
+    border: 1px solid rgb(36, 128, 0);*/
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+
+  /*border: 1px solid blue;*/
+}
