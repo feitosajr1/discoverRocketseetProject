@@ -25,13 +25,17 @@ body * {
   text-align: center;
   padding: 24px;
 
-  /*width:360px;
+  /*
+    width:360px;
     height:192px;
-    border: 1px solid rgb(36, 128, 0);*/
+    border: 1px solid rgb(36, 128, 0);
+  */
 }
 
 #profile img {
   width: 112px;
+
+  /*border: 1px solid white;*/
 }
 
 #profile p {
@@ -40,4 +44,34 @@ body * {
   margin-top: 8px;
 
   /*border: 1px solid blue;*/
+}
+
+/* links */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+
+  /*border: 1px solid white;*/
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1); /*cor1 para variavel*/
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05); /*cor1 para variavel*/
+
 }
