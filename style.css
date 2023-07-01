@@ -9,7 +9,7 @@
   --bg-url: url(./assets/bg-dark-mobile.jpg);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
-  --highlight-color: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --toggle-handle: url(./assets/monn-stars.svg);
 }
@@ -26,8 +26,8 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  transition: background 1s;
-  height:100vh;
+  transition: background 0.5s;
+  height: 100vh;
 }
 
 body * {
@@ -58,7 +58,6 @@ body * {
 
 #profile img {
   width: 112px;
-
   /*border: 1px solid white;*/
 }
 
@@ -90,11 +89,16 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   transition: background 0.5s;
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color); 
+  transition: 0.2s;
 }
 
 #switch span {
@@ -132,6 +136,7 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
+
 }
 
 ul li a:hover {
@@ -156,7 +161,7 @@ ul li a:hover {
   padding: 16px;
   border-radius: 56px;
   transition: background 0.5s;
-
+  
   /*border:1px solid blue;*/
 }
 
@@ -178,5 +183,23 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-light-desktop.png);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left:0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back { 
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
