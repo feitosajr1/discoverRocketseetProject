@@ -27,6 +27,7 @@
 body {
   background: var(--bg-url) no-repeat top center/cover;
   transition: background 1s;
+  height:100vh;
 }
 
 body * {
@@ -36,9 +37,9 @@ body * {
 
 #container {
   width: 100%;
-  max-width:588px;
-  height: 712px;
+  max-width: 588px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 
   /*border: 1px solid red;*/
 }
@@ -73,7 +74,7 @@ body * {
 
 #switch {
   position: relative;
-  width:64px;
+  width: 64px;
   margin: 4px auto;
 }
 
@@ -84,20 +85,20 @@ body * {
   border: 0;
   border-radius: 9999px;
   position: absolute;
-  top:50%;
-  left:0;
-  z-index:1;
+  top: 50%;
+  left: 0;
+  z-index: 1;
   transform: translateY(-50%);
-  transition: background 0.5s ;
+  transition: background 0.5s;
 }
 
 .light #switch button {
-  right:0;
-  left:initial;
+  right: 0;
+  left: initial;
 }
 
 #switch span {
-  display:block;
+  display: block;
   width: 64px;
   height: 24px;
   background: var(--surface-color);
@@ -168,4 +169,14 @@ footer {
   text-align: center;
 
   /*border:1px solid green;*/
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-dark-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-light-desktop.png);
+  }
 }
